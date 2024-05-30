@@ -1,0 +1,23 @@
+--get bstools
+
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "BTOOLS"
+tool.ToolTip = "Btools without being kicked."
+tool.Activated:connect(function()
+local obj = mouse.Target
+obj:Destroy()
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+
+--bypass (it should bypass the remote that ban or kick u)
+
+local rawrxd = workspace.CurrentCamera:Clone()
+rawrxd:ClearAllChildren()
+workspace.CurrentCamera:Destroy()
+rawrxd.Parent = workspace
+for i=2,4 do
+   Instance.new("HopperBin", game:GetService'Players'.LocalPlayer.Backpack).BinType = i
+end
