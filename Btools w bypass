@@ -1,4 +1,4 @@
---get bstools
+--get bstools. (or u can j disable the RunService events)
 
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
